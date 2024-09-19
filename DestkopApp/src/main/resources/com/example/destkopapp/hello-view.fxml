@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<HBox spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.destkopapp.EditorController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <VBox  alignment="TOP_LEFT" spacing="10.0" HBox.hgrow="ALWAYS">
+        <Label fx:id="ModeText"/>
+        <HBox alignment="TOP_LEFT" spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label text="Imie" />
+            <TextField fx:id="nameText" />
+        </HBox>
+        <HBox alignment="TOP_LEFT" spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label text="Nazwisko" />
+            <TextField fx:id="surNameText" />
+        </HBox>
+        <HBox alignment="TOP_LEFT" spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label text="wiek" />
+            <TextField fx:id="ageText" />
+        </HBox>
+        <HBox alignment="TOP_LEFT" spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label text="adres" />
+            <TextField fx:id="adressText" />
+        </HBox>
+
+        <Button fx:id="saveButton" onAction="#save" text="Zapisz"/>
+        <Button fx:id="deleteButton" onAction="#deleteObject" text="Usuń obiekt"/>
+     </VBox>
+
+    <VBox fx:id="rightPanel" alignment="TOP_LEFT" spacing="10.0" HBox.hgrow="ALWAYS">
+        <Label text="Right Panel" />
+        <ListView fx:id="listView" />
+        <Button  fx:id="editButton" onAction="#editObject" text="Edytuj obiekt" />
+        <Button fx:id="createButton"  onAction="#createNewObject" text="Nowy obiekt" />
+    </VBox>
+</HBox>
